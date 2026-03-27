@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     baseURL: '/doofpi-docs/',
     buildAssetsDir: 'assets',
     head: {
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }]
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/doofpi-docs/favicon.svg' }]
     }
   },
   fonts: {
