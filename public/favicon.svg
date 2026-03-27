@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c2410c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="48" height="48" rx="11" fill="url(#bg)"/>
+
+  <!-- Subtle top highlight -->
+  <rect x="0" y="0" width="48" height="12" rx="11" fill="white" fill-opacity="0.07"/>
+
+  <!--
+    API connection mark:
+    - Left node (client)
+    - Right node (server)
+    - Two curved flow lines between them (request up, response down)
+    - Small arrowhead on each curve at the receiving end
+  -->
+
+  <!-- Left node -->
+  <circle cx="11" cy="24" r="4" fill="white"/>
+
+  <!-- Right node -->
+  <circle cx="37" cy="24" r="4" fill="white"/>
+
+  <!-- Upper arc: left → right (request) -->
+  <path
+    d="M15 22 C20 13, 28 13, 33 22"
+    stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"
+    opacity="0.9"/>
+
+  <!-- Arrowhead tip at right end of upper arc -->
+  <polyline
+    points="30,19 33,22 29.5,24"
+    stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
+    opacity="0.9"/>
+
+  <!-- Lower arc: right → left (response) -->
+  <path
+    d="M33 26 C28 35, 20 35, 15 26"
+    stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"
+    opacity="0.7"/>
+
+  <!-- Arrowhead tip at left end of lower arc -->
+  <polyline
+    points="18,29 15,26 18.5,24"
+    stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
+    opacity="0.7"/>
+</svg>
