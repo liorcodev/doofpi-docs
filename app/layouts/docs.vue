@@ -1,12 +1,12 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-white">
+  <div class="min-h-screen flex flex-col bg-white overflow-x-hidden">
     <AppNav />
     <div class="flex flex-1 pt-16">
       <!-- Sidebar -->
       <DocsSidebar />
       <!-- Main content -->
-      <main class="flex-1 min-w-0 px-6 py-10 lg:pl-72 lg:pr-60">
-        <div class="max-w-3xl mx-auto">
+      <main class="flex-1 min-w-0 px-4 sm:px-6 py-10 lg:pl-72 lg:pr-60">
+        <div class="max-w-3xl mx-auto overflow-x-hidden">
           <slot />
           <DocsNavigation class="mt-16" />
         </div>
