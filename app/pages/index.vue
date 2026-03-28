@@ -115,7 +115,7 @@ const features = [
 </script>
 
 <template>
-  <div class="relative bg-white">
+  <div class="relative bg-white overflow-x-hidden">
     <!-- ─── Hero ─────────────────────────────────────────── -->
     <section
       class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-12 bg-linear-to-b from-orange-50/40 via-white to-amber-50/20"
@@ -227,15 +227,15 @@ const features = [
         <!-- Code preview -->
         <div class="grid md:grid-cols-2 gap-8 text-left max-w-6xl mx-auto">
           <!-- Server -->
-          <div class="relative group">
+          <div class="relative group min-w-0">
             <div
               class="absolute -inset-1 bg-linear-to-r from-orange-400 to-red-400 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"
             ></div>
             <div
-              class="relative bg-white rounded-3xl overflow-hidden border-2 border-orange-200/70 shadow-2xl group-hover:border-orange-300 transition-all"
+              class="relative bg-white rounded-3xl overflow-hidden border-2 border-orange-200/70 shadow-2xl group-hover:border-orange-300 transition-all min-w-0"
             >
               <div
-                class="bg-linear-to-br from-orange-50 via-white to-amber-50 px-6 py-4 border-b-2 border-orange-200/50"
+                class="bg-linear-to-br from-orange-50 via-white to-amber-50 px-4 sm:px-6 py-4 border-b-2 border-orange-200/50"
               >
                 <div class="flex items-center gap-3">
                   <div class="flex gap-1.5">
@@ -253,22 +253,26 @@ const features = [
                   <span class="text-sm font-mono font-bold text-slate-600">server.ts</span>
                 </div>
               </div>
-              <div class="p-6 bg-linear-to-br from-white to-orange-50/30">
-                <MDC :value="serverCode" />
+              <div
+                class="p-4 sm:p-6 bg-linear-to-br from-white to-orange-50/30 overflow-x-auto max-w-full"
+              >
+                <div class="min-w-max sm:min-w-0">
+                  <MDC :value="serverCode" />
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Client -->
-          <div class="relative group">
+          <div class="relative group min-w-0">
             <div
               class="absolute -inset-1 bg-linear-to-r from-orange-400 to-red-400 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"
             ></div>
             <div
-              class="relative bg-white rounded-3xl overflow-hidden border-2 border-orange-200/70 shadow-2xl group-hover:border-orange-300 transition-all"
+              class="relative bg-white rounded-3xl overflow-hidden border-2 border-orange-200/70 shadow-2xl group-hover:border-orange-300 transition-all min-w-0"
             >
               <div
-                class="bg-linear-to-br from-orange-50 via-white to-amber-50 px-6 py-4 border-b-2 border-orange-200/50"
+                class="bg-linear-to-br from-orange-50 via-white to-amber-50 px-4 sm:px-6 py-4 border-b-2 border-orange-200/50"
               >
                 <div class="flex items-center gap-3">
                   <div class="flex gap-1.5">
@@ -286,8 +290,12 @@ const features = [
                   <span class="text-sm font-mono font-bold text-slate-600">client.ts</span>
                 </div>
               </div>
-              <div class="p-6 bg-linear-to-br from-white to-orange-50/30">
-                <MDC :value="clientCode" />
+              <div
+                class="p-4 sm:p-6 bg-linear-to-br from-white to-orange-50/30 overflow-x-auto max-w-full"
+              >
+                <div class="min-w-max sm:min-w-0">
+                  <MDC :value="clientCode" />
+                </div>
               </div>
             </div>
           </div>
@@ -296,7 +304,7 @@ const features = [
     </section>
 
     <!-- ─── Features ──────────────────────────────────────── -->
-    <section class="relative py-32 px-4 bg-white">
+    <section class="relative py-32 px-4 bg-white overflow-x-hidden">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-20">
           <div class="inline-block mb-4">
@@ -344,7 +352,7 @@ const features = [
 
     <!-- ─── How it works ──────────────────────────────────── -->
     <!-- ─── Deploy Anywhere ──────────────────────────────────── -->
-    <section class="py-32 px-4 bg-linear-to-b from-orange-50 to-white">
+    <section class="py-32 px-4 bg-linear-to-b from-orange-50 to-white overflow-x-hidden">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-16">
           <div class="inline-block mb-4">
@@ -390,42 +398,44 @@ const features = [
                   <span class="text-sm font-mono font-bold text-slate-600">index.ts</span>
                 </div>
               </div>
-              <div class="p-6 bg-linear-to-br from-white to-orange-50/30">
+              <div class="p-4 sm:p-6 bg-linear-to-br from-white to-orange-50/30 overflow-x-auto">
                 <MDC :value="webStandardCode" />
               </div>
             </div>
           </div>
 
           <!-- Flow visualization -->
-          <div class="mt-12 flex items-center justify-center gap-6 text-center">
-            <div class="flex-1">
+          <div
+            class="mt-12 flex items-center justify-center gap-3 sm:gap-6 text-center overflow-x-auto px-4"
+          >
+            <div class="flex-1 min-w-20">
               <div
-                class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-orange-100 text-orange-600 mb-3"
+                class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-orange-100 text-orange-600 mb-3"
               >
-                <Icon name="heroicons:arrow-down-tray" class="text-2xl" />
+                <Icon name="heroicons:arrow-down-tray" class="text-lg sm:text-2xl" />
               </div>
-              <div class="text-sm font-bold text-slate-700">Request</div>
-              <div class="text-xs text-slate-500">Standard Web API</div>
+              <div class="text-xs sm:text-sm font-bold text-slate-700">Request</div>
+              <div class="text-xs text-slate-500 hidden sm:block">Standard Web API</div>
             </div>
-            <div class="text-3xl text-orange-500 font-bold">→</div>
-            <div class="flex-1">
+            <div class="text-xl sm:text-3xl text-orange-500 font-bold shrink-0">→</div>
+            <div class="flex-1 min-w-20">
               <div
-                class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-linear-to-br from-orange-500 to-red-500 text-white mb-3 shadow-xl animate-pulse-glow"
+                class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-linear-to-br from-orange-500 to-red-500 text-white mb-3 shadow-xl animate-pulse-glow"
               >
-                <Icon name="heroicons:bolt" class="text-2xl" />
+                <Icon name="heroicons:bolt" class="text-lg sm:text-2xl" />
               </div>
-              <div class="text-sm font-bold text-slate-900">d.fetch()</div>
-              <div class="text-xs text-slate-500">Your typed API</div>
+              <div class="text-xs sm:text-sm font-bold text-slate-900">d.fetch()</div>
+              <div class="text-xs text-slate-500 hidden sm:block">Your typed API</div>
             </div>
-            <div class="text-3xl text-orange-500 font-bold">→</div>
-            <div class="flex-1">
+            <div class="text-xl sm:text-3xl text-orange-500 font-bold shrink-0">→</div>
+            <div class="flex-1 min-w-20">
               <div
-                class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-100 text-amber-600 mb-3"
+                class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-amber-100 text-amber-600 mb-3"
               >
-                <Icon name="heroicons:arrow-up-tray" class="text-2xl" />
+                <Icon name="heroicons:arrow-up-tray" class="text-lg sm:text-2xl" />
               </div>
-              <div class="text-sm font-bold text-slate-700">Response</div>
-              <div class="text-xs text-slate-500">Standard Web API</div>
+              <div class="text-xs sm:text-sm font-bold text-slate-700">Response</div>
+              <div class="text-xs text-slate-500 hidden sm:block">Standard Web API</div>
             </div>
           </div>
 
@@ -518,17 +528,20 @@ const features = [
               { from: 'procedure.use()', to: '.middleware()' }
             ]"
             :key="row.from"
-            class="grid grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-4 rounded-xl border-2 border-orange-100 bg-linear-to-r from-orange-50/50 to-amber-50/50 hover:border-orange-300 transition-all"
+            class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-4 px-3 sm:px-6 py-3 sm:py-4 rounded-xl border-2 border-orange-100 bg-linear-to-r from-orange-50/50 to-amber-50/50 hover:border-orange-300 transition-all min-w-0"
           >
-            <span class="text-slate-500 text-right font-mono text-sm font-medium">{{
-              row.from
-            }}</span>
-            <div
-              class="w-10 h-10 rounded-full bg-linear-to-br from-orange-500 to-red-500 flex items-center justify-center"
+            <span
+              class="text-slate-500 text-right font-mono text-xs sm:text-sm font-medium truncate"
+              >{{ row.from }}</span
             >
-              <Icon name="heroicons:arrow-right" class="text-white text-lg font-bold" />
+            <div
+              class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-linear-to-br from-orange-500 to-red-500 flex items-center justify-center shrink-0"
+            >
+              <Icon name="heroicons:arrow-right" class="text-white text-sm sm:text-lg font-bold" />
             </div>
-            <span class="text-slate-900 font-bold font-mono text-sm">{{ row.to }}</span>
+            <span class="text-slate-900 font-bold font-mono text-xs sm:text-sm truncate">{{
+              row.to
+            }}</span>
           </div>
         </div>
       </div>
@@ -536,7 +549,7 @@ const features = [
 
     <!-- ─── CTA ───────────────────────────────────────────── -->
     <section
-      class="py-32 px-4 relative overflow-hidden bg-linear-to-br from-orange-600 via-red-600 to-orange-700"
+      class="py-32 px-4 relative overflow-x-hidden bg-linear-to-br from-orange-600 via-red-600 to-orange-700"
     >
       <!-- Animated background -->
       <div
