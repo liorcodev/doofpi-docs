@@ -12,13 +12,13 @@
     "@nuxt/content": "^3.14.0",
     "@nuxt/fonts": "0.14.0",
     "@nuxt/icon": "2.2.1",
-    "@tailwindcss/vite": "^4.3.0",
-    "better-sqlite3": "^12.10.0",
+    "@tailwindcss/vite": "^4.3.2",
+    "better-sqlite3": "^12.11.1",
     "fuse.js": "^7.4.2",
     "nuxt": "^4.4.8",
-    "tailwindcss": "^4.3.0"
+    "tailwindcss": "^4.3.2"
   },
   "devDependencies": {
-    "prettier": "^3.8.4"
+    "prettier": "^3.9.4"
   }
 }
