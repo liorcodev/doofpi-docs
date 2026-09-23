@@ -23,7 +23,7 @@ jobs:
         run: bun install
 
       - name: Build static site
-        run: bun run build
+        run: bun run generate
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
