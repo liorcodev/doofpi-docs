@@ -7,8 +7,12 @@ import { extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../.output/public/', import.meta.url));
-const configText = await readFile(fileURLToPath(new URL('../nuxt.config.ts', import.meta.url)), 'utf8');
-const baseURL = (configText.match(/baseURL:\s*['"]([^'"]+)['"]/)?.[1] ?? '/').replace(/\/+$/, '') || '';
+const configText = await readFile(
+  fileURLToPath(new URL('../nuxt.config.ts', import.meta.url)),
+  'utf8'
+);
+const baseURL =
+  (configText.match(/baseURL:\s*['"]([^'"]+)['"]/)?.[1] ?? '/').replace(/\/+$/, '') || '';
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',

@@ -1,5 +1,5 @@
 // List versions newest-first; the first entry is treated as "latest".
-export const DOCS_VERSIONS = ['v1.1.0', 'v1.0.0'] as const;
+export const DOCS_VERSIONS = ['v1.2.0', 'v1.1.0', 'v1.0.0'] as const;
 export type DocsVersion = (typeof DOCS_VERSIONS)[number];
 export const LATEST_VERSION: DocsVersion = DOCS_VERSIONS[0]!;
 
