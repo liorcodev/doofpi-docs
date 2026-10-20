@@ -34,32 +34,28 @@ const next = computed(() =>
 </script>
 
 <template>
-  <div v-if="prev || next" class="flex gap-4 pt-8 border-t border-orange-100">
+  <div v-if="prev || next" class="flex gap-4 pt-8 border-t border-blue-100">
     <NuxtLink
       v-if="prev"
       :to="prev.to"
-      class="flex-1 flex flex-col gap-1 px-5 py-4 rounded-xl border border-slate-200 hover:border-orange-300 bg-white hover:bg-orange-50 transition-all duration-200 group"
+      class="flex-1 flex flex-col gap-1 px-5 py-4 rounded-xl border border-slate-200 hover:border-blue-300 bg-white hover:bg-blue-50 transition-all duration-200 group"
     >
       <span class="text-xs text-slate-500 flex items-center gap-1.5">
         <Icon name="heroicons:arrow-left" class="text-sm" /> Previous
       </span>
-      <span
-        class="text-sm font-medium text-slate-300 group-hover:text-orange-300 transition-colors"
-      >
+      <span class="text-sm font-medium text-slate-300 group-hover:text-blue-300 transition-colors">
         {{ prev.title }}
       </span>
     </NuxtLink>
     <NuxtLink
       v-if="next"
       :to="next.to"
-      class="flex-1 flex flex-col gap-1 px-5 py-4 rounded-xl border border-slate-200 hover:border-orange-300 bg-white hover:bg-orange-50 transition-all duration-200 group text-right ml-auto"
+      class="flex-1 flex flex-col gap-1 px-5 py-4 rounded-xl border border-slate-200 hover:border-blue-300 bg-white hover:bg-blue-50 transition-all duration-200 group text-right ml-auto"
     >
       <span class="text-xs text-slate-500 flex items-center gap-1.5 justify-end">
         Next <Icon name="heroicons:arrow-right" class="text-sm" />
       </span>
-      <span
-        class="text-sm font-medium text-slate-700 group-hover:text-orange-700 transition-colors"
-      >
+      <span class="text-sm font-medium text-slate-700 group-hover:text-blue-700 transition-colors">
         {{ next.title }}
       </span>
     </NuxtLink>

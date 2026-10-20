@@ -81,9 +81,7 @@ watch(
           :class="[
             'block rounded px-2 py-1 text-sm transition-colors',
             h.level === 3 ? 'pl-5' : '',
-            activeId === h.id
-              ? 'text-orange-600 font-medium'
-              : 'text-slate-500 hover:text-slate-900'
+            activeId === h.id ? 'text-blue-600 font-medium' : 'text-slate-500 hover:text-slate-900'
           ]"
           >{{ h.text }}</a
         >

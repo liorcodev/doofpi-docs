@@ -59,55 +59,55 @@ export default { fetch: d.fetch }
 const features = [
   {
     icon: 'heroicons:bolt',
-    bg: 'bg-linear-to-br from-orange-500 to-orange-600',
+    bg: 'bg-linear-to-br from-blue-500 to-blue-600',
     title: 'Zero Boilerplate',
     desc: 'No adapters, no generated files, no configuration. Write handlers, register routes, ship - doofpi gets out of your way.'
   },
   {
     icon: 'heroicons:globe-alt',
-    bg: 'bg-linear-to-br from-orange-600 to-red-600',
+    bg: 'bg-linear-to-br from-blue-600 to-indigo-600',
     title: 'Web Standards Compatible',
     desc: 'Built on the Web Standards Request/Response API. Works with any runtime that supports the Fetch API standard.'
   },
   {
     icon: 'heroicons:shield-check',
-    bg: 'bg-linear-to-br from-amber-500 to-orange-600',
+    bg: 'bg-linear-to-br from-cyan-500 to-blue-600',
     title: 'Input + Output Validation',
     desc: 'Optional Zod validation for inputs and outputs. Validate what clients send and prevent accidental data leaks.'
   },
   {
     icon: 'heroicons:code-bracket',
-    bg: 'bg-linear-to-br from-orange-500 to-orange-700',
+    bg: 'bg-linear-to-br from-blue-500 to-blue-700',
     title: 'End-to-End Type Safety',
     desc: "TypeScript knows every endpoint's input and output. No codegen. No schema files. Pure inference."
   },
   {
     icon: 'heroicons:sparkles',
-    bg: 'bg-linear-to-br from-orange-400 to-orange-500',
+    bg: 'bg-linear-to-br from-blue-400 to-blue-500',
     title: 'Tiny Footprint',
     desc: 'One runtime dependency: extreme-router. Zod is optional - but when you add it, you get both runtime validation and full TypeScript inference for inputs and outputs at no extra wiring cost.'
   },
   {
     icon: 'heroicons:rocket-launch',
-    bg: 'bg-linear-to-br from-red-500 to-orange-600',
+    bg: 'bg-linear-to-br from-indigo-500 to-blue-600',
     title: 'Blazing Fast Routing',
-    desc: 'Powered by <a href="https://github.com/liorcodev/extreme-router" target="_blank" rel="noopener" class="text-orange-600 hover:underline font-medium">extreme-router</a> - O(1) static lookups for lightning-fast route matching. No regex, no iteration, just direct hash-based routing.'
+    desc: 'Powered by <a href="https://github.com/liorcodev/extreme-router" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-medium">extreme-router</a> - O(1) static lookups for lightning-fast route matching. No regex, no iteration, just direct hash-based routing.'
   },
   {
     icon: 'heroicons:variable',
-    bg: 'bg-linear-to-br from-amber-600 to-orange-600',
+    bg: 'bg-linear-to-br from-cyan-600 to-blue-600',
     title: 'Typed Env & Runtime',
     desc: "defineEnv<{...}>() types your env vars and platform bindings (KV, D1, R2). defineExtra<T>() types runtime-specific data like Cloudflare's ExecutionContext or Bun's Server - all flowing into every handler."
   },
   {
     icon: 'heroicons:puzzle-piece',
-    bg: 'bg-linear-to-br from-orange-500 to-red-500',
+    bg: 'bg-linear-to-br from-blue-500 to-indigo-500',
     title: 'Split Routes, Zero Ceremony',
     desc: 'Compose routes across any number of files without exporting a type from each one. doofpi infers the full route tree automatically - no per-file type exports needed.'
   },
   {
     icon: 'heroicons:fire',
-    bg: 'bg-linear-to-br from-orange-600 to-red-600',
+    bg: 'bg-linear-to-br from-blue-600 to-indigo-600',
     title: 'Global Lifecycle Hooks',
     desc: 'Hook into every request with onRequest, every response with onResponse, and every error with onError - set once globally, no per-endpoint configuration needed.'
   }
@@ -118,22 +118,22 @@ const features = [
   <div class="relative bg-white overflow-x-hidden">
     <!-- ─── Hero ─────────────────────────────────────────── -->
     <section
-      class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-12 bg-linear-to-b from-orange-50/40 via-white to-amber-50/20"
+      class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-12 bg-linear-to-b from-blue-50/40 via-white to-cyan-50/20"
     >
       <!-- Animated background blobs -->
       <div
-        class="absolute -top-10 -left-10 w-125 h-125 bg-orange-500/15 rounded-full blur-2xl animate-glow-pulse"
+        class="absolute -top-10 -left-10 w-125 h-125 bg-blue-500/15 rounded-full blur-2xl animate-glow-pulse"
       />
       <div
-        class="absolute top-20 -right-20 w-80 h-80 bg-red-500/20 rounded-full blur-xl animate-glow-pulse"
+        class="absolute top-20 -right-20 w-80 h-80 bg-indigo-500/20 rounded-full blur-xl animate-glow-pulse"
         style="animation-delay: 2s"
       />
       <div
-        class="absolute -bottom-20 -left-20 w-96 h-96 bg-amber-500/15 rounded-full blur-2xl animate-glow-pulse"
+        class="absolute -bottom-20 -left-20 w-96 h-96 bg-cyan-500/15 rounded-full blur-2xl animate-glow-pulse"
         style="animation-delay: 1s"
       />
       <div
-        class="absolute -bottom-10 -right-10 w-150 h-150 bg-linear-to-br from-orange-500/10 to-red-500/10 rounded-full blur-2xl animate-glow-pulse"
+        class="absolute -bottom-10 -right-10 w-150 h-150 bg-linear-to-br from-blue-500/10 to-indigo-500/10 rounded-full blur-2xl animate-glow-pulse"
         style="animation-delay: 3s"
       />
 
@@ -143,7 +143,7 @@ const features = [
           <!-- Badge -->
           <div class="animate-slide-in-scale delay-100 mb-6">
             <span
-              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest bg-linear-to-r from-orange-500 to-red-500 text-white shadow-xl shadow-orange-500/40"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest bg-linear-to-r from-blue-500 to-indigo-500 text-white shadow-xl shadow-blue-500/40"
             >
               <Icon name="heroicons:sparkles" class="text-base" />
               Edge-First TypeScript API Framework
@@ -164,9 +164,9 @@ const features = [
             class="animate-slide-in-scale delay-300 text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto mb-6 leading-relaxed font-medium"
           >
             Define your API once in TypeScript, ship to the edge with
-            <span class="text-orange-600 font-bold">no code generation</span>,
-            <span class="text-orange-600 font-bold">no adapters</span>,
-            <span class="text-orange-600 font-bold">no complexity</span>.
+            <span class="text-blue-600 font-bold">no code generation</span>,
+            <span class="text-blue-600 font-bold">no adapters</span>,
+            <span class="text-blue-600 font-bold">no complexity</span>.
           </p>
 
           <!-- CTAs -->
@@ -175,7 +175,7 @@ const features = [
           >
             <NuxtLink
               to="/docs/introduction"
-              class="btn-glow inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-base shadow-2xl shadow-orange-500/30 hover:scale-105 transition-transform"
+              class="btn-glow inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-base shadow-2xl shadow-blue-500/30 hover:scale-105 transition-transform"
             >
               <Icon name="heroicons:rocket-launch" class="text-lg" />
               Get Started
@@ -195,9 +195,9 @@ const features = [
       <!-- Scroll indicator -->
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float z-10">
         <div
-          class="w-6 h-10 rounded-full border-2 border-orange-400 flex items-start justify-center pt-2"
+          class="w-6 h-10 rounded-full border-2 border-blue-400 flex items-start justify-center pt-2"
         >
-          <div class="w-1.5 h-2.5 rounded-full bg-orange-500 animate-bounce" />
+          <div class="w-1.5 h-2.5 rounded-full bg-blue-500 animate-bounce" />
         </div>
       </div>
     </section>
@@ -208,7 +208,7 @@ const features = [
         <div class="text-center mb-16">
           <div class="inline-block mb-4">
             <span
-              class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-orange-100 text-orange-700 border border-orange-300"
+              class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-blue-100 text-blue-700 border border-blue-300"
             >
               How It Works
             </span>
@@ -229,13 +229,13 @@ const features = [
           <!-- Server -->
           <div class="relative group min-w-0">
             <div
-              class="absolute -inset-1 bg-linear-to-r from-orange-400 to-red-400 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"
+              class="absolute -inset-1 bg-linear-to-r from-blue-400 to-indigo-400 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"
             ></div>
             <div
-              class="relative bg-white rounded-3xl overflow-hidden border-2 border-orange-200/70 shadow-2xl group-hover:border-orange-300 transition-all min-w-0"
+              class="relative bg-white rounded-3xl overflow-hidden border-2 border-blue-200/70 shadow-2xl group-hover:border-blue-300 transition-all min-w-0"
             >
               <div
-                class="bg-linear-to-br from-orange-50 via-white to-amber-50 px-4 sm:px-6 py-4 border-b-2 border-orange-200/50"
+                class="bg-linear-to-br from-blue-50 via-white to-cyan-50 px-4 sm:px-6 py-4 border-b-2 border-blue-200/50"
               >
                 <div class="flex items-center gap-3">
                   <div class="flex gap-1.5">
@@ -249,12 +249,12 @@ const features = [
                       class="w-3 h-3 rounded-full bg-emerald-400 shadow-sm ring-1 ring-emerald-500/20"
                     ></div>
                   </div>
-                  <div class="h-5 w-px bg-orange-200"></div>
+                  <div class="h-5 w-px bg-blue-200"></div>
                   <span class="text-sm font-mono font-bold text-slate-600">server.ts</span>
                 </div>
               </div>
               <div
-                class="p-4 sm:p-6 bg-linear-to-br from-white to-orange-50/30 overflow-x-auto max-w-full"
+                class="p-4 sm:p-6 bg-linear-to-br from-white to-blue-50/30 overflow-x-auto max-w-full"
               >
                 <div class="min-w-max sm:min-w-0">
                   <MDC :value="serverCode" />
@@ -266,13 +266,13 @@ const features = [
           <!-- Client -->
           <div class="relative group min-w-0">
             <div
-              class="absolute -inset-1 bg-linear-to-r from-orange-400 to-red-400 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"
+              class="absolute -inset-1 bg-linear-to-r from-blue-400 to-indigo-400 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"
             ></div>
             <div
-              class="relative bg-white rounded-3xl overflow-hidden border-2 border-orange-200/70 shadow-2xl group-hover:border-orange-300 transition-all min-w-0"
+              class="relative bg-white rounded-3xl overflow-hidden border-2 border-blue-200/70 shadow-2xl group-hover:border-blue-300 transition-all min-w-0"
             >
               <div
-                class="bg-linear-to-br from-orange-50 via-white to-amber-50 px-4 sm:px-6 py-4 border-b-2 border-orange-200/50"
+                class="bg-linear-to-br from-blue-50 via-white to-cyan-50 px-4 sm:px-6 py-4 border-b-2 border-blue-200/50"
               >
                 <div class="flex items-center gap-3">
                   <div class="flex gap-1.5">
@@ -286,12 +286,12 @@ const features = [
                       class="w-3 h-3 rounded-full bg-emerald-400 shadow-sm ring-1 ring-emerald-500/20"
                     ></div>
                   </div>
-                  <div class="h-5 w-px bg-orange-200"></div>
+                  <div class="h-5 w-px bg-blue-200"></div>
                   <span class="text-sm font-mono font-bold text-slate-600">client.ts</span>
                 </div>
               </div>
               <div
-                class="p-4 sm:p-6 bg-linear-to-br from-white to-orange-50/30 overflow-x-auto max-w-full"
+                class="p-4 sm:p-6 bg-linear-to-br from-white to-blue-50/30 overflow-x-auto max-w-full"
               >
                 <div class="min-w-max sm:min-w-0">
                   <MDC :value="clientCode" />
@@ -309,7 +309,7 @@ const features = [
         <div class="text-center mb-20">
           <div class="inline-block mb-4">
             <span
-              class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-orange-100 text-orange-700 border border-orange-300"
+              class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-blue-100 text-blue-700 border border-blue-300"
             >
               Why doofpi
             </span>
@@ -343,7 +343,7 @@ const features = [
               <p class="text-slate-600 text-sm leading-relaxed" v-html="f.desc"></p>
             </div>
             <div
-              class="absolute -right-8 -bottom-8 w-32 h-32 bg-linear-to-br from-orange-100 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+              class="absolute -right-8 -bottom-8 w-32 h-32 bg-linear-to-br from-blue-100 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
             />
           </div>
         </div>
@@ -352,12 +352,12 @@ const features = [
 
     <!-- ─── How it works ──────────────────────────────────── -->
     <!-- ─── Deploy Anywhere ──────────────────────────────────── -->
-    <section class="py-32 px-4 bg-linear-to-b from-orange-50 to-white overflow-x-hidden">
+    <section class="py-32 px-4 bg-linear-to-b from-blue-50 to-white overflow-x-hidden">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-16">
           <div class="inline-block mb-4">
             <span
-              class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-white text-orange-700 border-2 border-orange-300 shadow-sm"
+              class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-white text-blue-700 border-2 border-blue-300 shadow-sm"
             >
               Web Standards Compatible
             </span>
@@ -374,13 +374,13 @@ const features = [
         <div class="max-w-3xl mx-auto">
           <div class="relative group">
             <div
-              class="absolute -inset-2 bg-linear-to-r from-orange-400 to-red-400 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition duration-500"
+              class="absolute -inset-2 bg-linear-to-r from-blue-400 to-indigo-400 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition duration-500"
             ></div>
             <div
-              class="relative bg-white rounded-3xl overflow-hidden border-2 border-orange-200/70 shadow-2xl"
+              class="relative bg-white rounded-3xl overflow-hidden border-2 border-blue-200/70 shadow-2xl"
             >
               <div
-                class="bg-linear-to-br from-orange-50 via-white to-amber-50 px-6 py-4 border-b-2 border-orange-200/50"
+                class="bg-linear-to-br from-blue-50 via-white to-cyan-50 px-6 py-4 border-b-2 border-blue-200/50"
               >
                 <div class="flex items-center gap-3">
                   <div class="flex gap-1.5">
@@ -394,11 +394,11 @@ const features = [
                       class="w-3 h-3 rounded-full bg-emerald-400 shadow-sm ring-1 ring-emerald-500/20"
                     ></div>
                   </div>
-                  <div class="h-5 w-px bg-orange-200"></div>
+                  <div class="h-5 w-px bg-blue-200"></div>
                   <span class="text-sm font-mono font-bold text-slate-600">index.ts</span>
                 </div>
               </div>
-              <div class="p-4 sm:p-6 bg-linear-to-br from-white to-orange-50/30 overflow-x-auto">
+              <div class="p-4 sm:p-6 bg-linear-to-br from-white to-blue-50/30 overflow-x-auto">
                 <MDC :value="webStandardCode" />
               </div>
             </div>
@@ -410,27 +410,27 @@ const features = [
           >
             <div class="flex-1 min-w-20">
               <div
-                class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-orange-100 text-orange-600 mb-3"
+                class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-blue-100 text-blue-600 mb-3"
               >
                 <Icon name="heroicons:arrow-down-tray" class="text-lg sm:text-2xl" />
               </div>
               <div class="text-xs sm:text-sm font-bold text-slate-700">Request</div>
               <div class="text-xs text-slate-500 hidden sm:block">Standard Web API</div>
             </div>
-            <div class="text-xl sm:text-3xl text-orange-500 font-bold shrink-0">→</div>
+            <div class="text-xl sm:text-3xl text-blue-500 font-bold shrink-0">→</div>
             <div class="flex-1 min-w-20">
               <div
-                class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-linear-to-br from-orange-500 to-red-500 text-white mb-3 shadow-xl animate-pulse-glow"
+                class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-linear-to-br from-blue-500 to-indigo-500 text-white mb-3 shadow-xl animate-pulse-glow"
               >
                 <Icon name="heroicons:bolt" class="text-lg sm:text-2xl" />
               </div>
               <div class="text-xs sm:text-sm font-bold text-slate-900">d.fetch()</div>
               <div class="text-xs text-slate-500 hidden sm:block">Your typed API</div>
             </div>
-            <div class="text-xl sm:text-3xl text-orange-500 font-bold shrink-0">→</div>
+            <div class="text-xl sm:text-3xl text-blue-500 font-bold shrink-0">→</div>
             <div class="flex-1 min-w-20">
               <div
-                class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-amber-100 text-amber-600 mb-3"
+                class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-cyan-100 text-cyan-600 mb-3"
               >
                 <Icon name="heroicons:arrow-up-tray" class="text-lg sm:text-2xl" />
               </div>
@@ -447,7 +447,7 @@ const features = [
             <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
               <div class="group flex flex-col items-center gap-2">
                 <div
-                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-orange-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-orange-400 transition-all duration-300"
+                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-blue-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-blue-400 transition-all duration-300"
                 >
                   <Icon name="i-logos:bun" class="text-3xl sm:text-4xl" />
                 </div>
@@ -455,7 +455,7 @@ const features = [
               </div>
               <div class="group flex flex-col items-center gap-2">
                 <div
-                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-orange-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-orange-400 transition-all duration-300"
+                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-blue-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-blue-400 transition-all duration-300"
                 >
                   <Icon name="i-logos:cloudflare-workers-icon" class="text-3xl sm:text-4xl" />
                 </div>
@@ -463,7 +463,7 @@ const features = [
               </div>
               <div class="group flex flex-col items-center gap-2">
                 <div
-                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-orange-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-orange-400 transition-all duration-300"
+                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-blue-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-blue-400 transition-all duration-300"
                 >
                   <Icon name="i-logos:vercel-icon" class="text-3xl sm:text-4xl" />
                 </div>
@@ -471,7 +471,7 @@ const features = [
               </div>
               <div class="group flex flex-col items-center gap-2">
                 <div
-                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-orange-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-orange-400 transition-all duration-300"
+                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-blue-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-blue-400 transition-all duration-300"
                 >
                   <Icon name="i-logos:deno" class="text-3xl sm:text-4xl" />
                 </div>
@@ -479,7 +479,7 @@ const features = [
               </div>
               <div class="group flex flex-col items-center gap-2">
                 <div
-                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-orange-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-orange-400 transition-all duration-300"
+                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl border-2 border-blue-200 flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:border-blue-400 transition-all duration-300"
                 >
                   <Icon name="i-logos:netlify-icon" class="text-3xl sm:text-4xl" />
                 </div>
@@ -492,11 +492,11 @@ const features = [
     </section>
 
     <!-- ─── tRPC Comparison ───────────────────────────────────── -->
-    <section class="py-28 px-4 bg-white border-t-2 border-orange-100">
+    <section class="py-28 px-4 bg-white border-t-2 border-blue-100">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
           <span
-            class="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6 bg-linear-to-r from-orange-500 to-red-500 text-white shadow-lg shadow-orange-500/30"
+            class="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6 bg-linear-to-r from-blue-500 to-indigo-500 text-white shadow-lg shadow-blue-500/30"
           >
             tRPC-inspired
           </span>
@@ -511,7 +511,7 @@ const features = [
               href="https://trpc.io"
               target="_blank"
               rel="noopener"
-              class="text-orange-600 hover:underline font-semibold"
+              class="text-blue-600 hover:underline font-semibold"
               >tRPC</a
             >? Same concepts, less configuration.
           </p>
@@ -528,14 +528,14 @@ const features = [
               { from: 'procedure.use()', to: '.middleware()' }
             ]"
             :key="row.from"
-            class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-4 px-3 sm:px-6 py-3 sm:py-4 rounded-xl border-2 border-orange-100 bg-linear-to-r from-orange-50/50 to-amber-50/50 hover:border-orange-300 transition-all min-w-0"
+            class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-4 px-3 sm:px-6 py-3 sm:py-4 rounded-xl border-2 border-blue-100 bg-linear-to-r from-blue-50/50 to-cyan-50/50 hover:border-blue-300 transition-all min-w-0"
           >
             <span
               class="text-slate-500 text-right font-mono text-xs sm:text-sm font-medium truncate"
               >{{ row.from }}</span
             >
             <div
-              class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-linear-to-br from-orange-500 to-red-500 flex items-center justify-center shrink-0"
+              class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-linear-to-br from-blue-500 to-indigo-500 flex items-center justify-center shrink-0"
             >
               <Icon name="heroicons:arrow-right" class="text-white text-sm sm:text-lg font-bold" />
             </div>
@@ -549,7 +549,7 @@ const features = [
 
     <!-- ─── CTA ───────────────────────────────────────────── -->
     <section
-      class="py-32 px-4 relative overflow-x-hidden bg-linear-to-br from-orange-600 via-red-600 to-orange-700"
+      class="py-32 px-4 relative overflow-x-hidden bg-linear-to-br from-blue-600 via-indigo-600 to-blue-700"
     >
       <!-- Animated background -->
       <div
@@ -563,10 +563,10 @@ const features = [
         "
       />
       <div
-        class="absolute top-10 left-20 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl animate-glow-pulse"
+        class="absolute top-10 left-20 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl animate-glow-pulse"
       />
       <div
-        class="absolute bottom-10 right-20 w-96 h-96 bg-red-400/20 rounded-full blur-3xl animate-glow-pulse"
+        class="absolute bottom-10 right-20 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl animate-glow-pulse"
         style="animation-delay: 1.5s"
       />
 
@@ -582,13 +582,13 @@ const features = [
           Start building in<br />
           under 5 minutes
         </h2>
-        <p class="text-orange-100 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-blue-100 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
           Full type safety, Web Standards compatible, zero ceremony.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink
             to="/docs/introduction"
-            class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold bg-white text-orange-700 hover:bg-orange-50 transition-all shadow-2xl hover:shadow-white/30 hover:scale-105"
+            class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold bg-white text-blue-700 hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/30 hover:scale-105"
           >
             <Icon name="heroicons:book-open" class="text-lg" />
             Read the docs

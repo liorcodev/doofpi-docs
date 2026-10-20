@@ -296,7 +296,7 @@ onMounted(() => {
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="
       isScrolled
-        ? 'bg-white/90 backdrop-blur-xl border-b border-orange-100 shadow-sm shadow-orange-100/60'
+        ? 'bg-white/90 backdrop-blur-xl border-b border-blue-100 shadow-sm shadow-blue-100/60'
         : 'bg-transparent'
     "
   >
@@ -305,7 +305,7 @@ onMounted(() => {
       <NuxtLink to="/" class="flex items-center gap-2.5 group">
         <img src="/logo.svg" class="w-8 h-8" alt="doofpi logo" />
         <span class="text-slate-800 font-bold text-lg tracking-tight">
-          doof<span class="text-orange-600">pi</span>
+          doof<span class="text-blue-600">pi</span>
         </span>
       </NuxtLink>
 
@@ -316,7 +316,7 @@ onMounted(() => {
           class="px-3.5 py-1.5 rounded-lg text-sm font-medium transition-all duration-200"
           :class="
             route.path.startsWith('/docs')
-              ? 'text-orange-700 bg-orange-50'
+              ? 'text-blue-700 bg-blue-50'
               : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
           "
         >
@@ -340,7 +340,7 @@ onMounted(() => {
       <div class="flex items-center gap-2">
         <!-- Search button -->
         <button
-          class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs text-slate-500 hover:text-slate-800 border border-slate-200 hover:border-orange-300 bg-white hover:bg-orange-50 transition-all duration-200 w-44"
+          class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs text-slate-500 hover:text-slate-800 border border-slate-200 hover:border-blue-300 bg-white hover:bg-blue-50 transition-all duration-200 w-44"
           @click="openSearch"
         >
           <Icon name="heroicons:magnifying-glass" class="text-sm shrink-0" />
@@ -352,7 +352,7 @@ onMounted(() => {
           href="https://www.npmjs.com/package/doofpi"
           target="_blank"
           rel="noopener"
-          class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono text-slate-500 hover:text-slate-800 border border-slate-200 hover:border-orange-300 bg-white hover:bg-orange-50 transition-all duration-200"
+          class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono text-slate-500 hover:text-slate-800 border border-slate-200 hover:border-blue-300 bg-white hover:bg-blue-50 transition-all duration-200"
         >
           <Icon name="simple-icons:npm" class="text-red-500 text-base" />
           doofpi
@@ -362,7 +362,7 @@ onMounted(() => {
           href="https://github.com/liorcodev/doofpi"
           target="_blank"
           rel="noopener"
-          class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 hover:text-slate-800 border border-slate-200 hover:border-orange-300 bg-white hover:bg-orange-50 transition-all duration-200"
+          class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 hover:text-slate-800 border border-slate-200 hover:border-blue-300 bg-white hover:bg-blue-50 transition-all duration-200"
         >
           <Icon name="simple-icons:github" class="text-base" />
         </a>
@@ -405,19 +405,19 @@ onMounted(() => {
       <nav class="flex flex-col py-2 px-4">
         <NuxtLink
           to="/docs/introduction"
-          class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-orange-600 rounded-lg transition-colors"
+          class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors"
         >
           Docs
         </NuxtLink>
         <NuxtLink
           to="/docs/quick-start"
-          class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-orange-600 rounded-lg transition-colors"
+          class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors"
         >
           Quick Start
         </NuxtLink>
         <NuxtLink
           to="/docs/api-reference/doofpi-class"
-          class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-orange-600 rounded-lg transition-colors"
+          class="px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors"
         >
           API
         </NuxtLink>
@@ -500,7 +500,7 @@ onMounted(() => {
                 <NuxtLink
                   :to="resultPath(result)"
                   class="w-full text-left px-4 py-3 flex items-start gap-3 transition-colors group"
-                  :class="i === selectedIndex ? 'bg-orange-50' : 'hover:bg-slate-50'"
+                  :class="i === selectedIndex ? 'bg-blue-50' : 'hover:bg-slate-50'"
                   @mouseenter="selectedIndex = i"
                   @click="closeSearch"
                 >
@@ -508,7 +508,7 @@ onMounted(() => {
                     class="flex items-center justify-center w-6 h-6 rounded-md shrink-0 mt-0.5"
                     :class="
                       result.score > 8
-                        ? 'bg-orange-100 text-orange-600'
+                        ? 'bg-blue-100 text-blue-600'
                         : result.score > 4
                           ? 'bg-slate-100 text-slate-500'
                           : 'bg-slate-50 text-slate-400'

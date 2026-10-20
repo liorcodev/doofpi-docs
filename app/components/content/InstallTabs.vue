@@ -44,7 +44,7 @@ function copy() {
           class="px-3 py-1.5 text-sm font-semibold rounded-lg transition-all border"
           :class="
             activeTab === tab.id
-              ? 'bg-orange-50 text-orange-600 border-orange-300'
+              ? 'bg-blue-50 text-blue-600 border-blue-300'
               : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
           "
         >
@@ -56,8 +56,8 @@ function copy() {
         class="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 flex items-center gap-1.5 shadow-sm hover:shadow-md bg-white border"
         :class="
           copied
-            ? 'border-orange-300 text-orange-600 bg-orange-50'
-            : 'border-slate-200 text-slate-700 hover:border-orange-400 hover:text-orange-600'
+            ? 'border-blue-300 text-blue-600 bg-blue-50'
+            : 'border-slate-200 text-slate-700 hover:border-blue-400 hover:text-blue-600'
         "
       >
         <Icon :name="copied ? 'heroicons:check' : 'heroicons:clipboard-document'" class="text-sm" />

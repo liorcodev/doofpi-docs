@@ -79,24 +79,24 @@ function switchVersion(v: string) {
   />
 
   <aside
-    class="fixed top-16 left-0 bottom-0 w-64 flex flex-col overflow-y-auto border-r border-orange-100 bg-white px-4 py-6 z-40 transition-transform duration-300 ease-in-out"
+    class="fixed top-16 left-0 bottom-0 w-64 flex flex-col overflow-y-auto border-r border-blue-100 bg-white px-4 py-6 z-40 transition-transform duration-300 ease-in-out"
     :class="mobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'"
   >
     <!-- Version selector -->
     <div class="relative mb-5">
       <div v-if="versionOpen" class="fixed inset-0 z-40" @click="versionOpen = false" />
       <button
-        class="relative z-50 w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm border border-slate-200 hover:border-orange-300 bg-white hover:bg-orange-50 transition-all duration-150 text-slate-700 font-medium"
+        class="relative z-50 w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm border border-slate-200 hover:border-blue-300 bg-white hover:bg-blue-50 transition-all duration-150 text-slate-700 font-medium"
         @click="versionOpen = !versionOpen"
       >
         <div class="flex items-center gap-2">
-          <Icon name="heroicons:tag" class="text-orange-500 text-sm shrink-0" />
+          <Icon name="heroicons:tag" class="text-blue-500 text-sm shrink-0" />
           <span>{{ currentVersion }}</span>
         </div>
         <div class="flex items-center gap-1.5">
           <span
             v-if="currentVersion === versions[0]"
-            class="text-[10px] bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded font-semibold"
+            class="text-[10px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded font-semibold"
           >
             latest
           </span>
@@ -122,11 +122,9 @@ function switchVersion(v: string) {
           <button
             v-for="v in versions"
             :key="v"
-            class="w-full flex items-center justify-between px-3 py-2.5 text-sm hover:bg-orange-50 transition-colors"
+            class="w-full flex items-center justify-between px-3 py-2.5 text-sm hover:bg-blue-50 transition-colors"
             :class="
-              v === currentVersion
-                ? 'text-orange-700 font-semibold bg-orange-50/60'
-                : 'text-slate-600'
+              v === currentVersion ? 'text-blue-700 font-semibold bg-blue-50/60' : 'text-slate-600'
             "
             @click="switchVersion(v)"
           >
@@ -134,14 +132,14 @@ function switchVersion(v: string) {
               <Icon
                 v-if="v === currentVersion"
                 name="heroicons:check"
-                class="text-orange-600 text-sm"
+                class="text-blue-600 text-sm"
               />
               <span v-else class="w-4 inline-block" />
               {{ v }}
             </div>
             <span
               v-if="v === versions[0]"
-              class="text-[10px] bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded font-semibold"
+              class="text-[10px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded font-semibold"
             >
               latest
             </span>
@@ -163,14 +161,14 @@ function switchVersion(v: string) {
               class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150"
               :class="
                 route.path === item.to
-                  ? 'bg-orange-50 text-orange-700 border border-orange-200 shadow-sm shadow-orange-100'
+                  ? 'bg-blue-50 text-blue-700 border border-blue-200 shadow-sm shadow-blue-100'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               "
               @click="closeMobileMenu"
             >
               <span
                 v-if="route.path === item.to"
-                class="w-1 h-1 rounded-full bg-orange-600 shrink-0"
+                class="w-1 h-1 rounded-full bg-blue-600 shrink-0"
               />
               <span v-else class="w-1 h-1 rounded-full bg-transparent shrink-0" />
               {{ item.title }}

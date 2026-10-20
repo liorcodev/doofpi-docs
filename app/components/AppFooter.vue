@@ -1,12 +1,12 @@
 <template>
-  <footer class="border-t border-orange-100 bg-white py-12">
+  <footer class="border-t border-blue-100 bg-white py-12">
     <div
       class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6"
     >
       <div class="flex items-center gap-2.5">
         <img src="/logo.svg" class="w-7 h-7" alt="doofpi" />
         <span class="text-slate-700 text-sm font-medium">
-          doof<span class="text-orange-600">pi</span>
+          doof<span class="text-blue-600">pi</span>
           <span class="ml-2 text-slate-400">· Edge-First TypeScript API Framework</span>
         </span>
       </div>

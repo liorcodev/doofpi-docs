@@ -4,16 +4,16 @@
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
 }
 
 /* ── Theme Variables ────────────────────────────────── */
@@ -26,13 +26,13 @@
   --color-primary-lighter: var(--color-brand-300);
 
   /* Background colors */
-  --color-bg: #fffaf5;
+  --color-bg: #f5f9ff;
   --color-bg-subtle: #f8faff;
-  --color-bg-code: #fffcf8;
+  --color-bg-code: #f8fbff;
 
   /* Surface colors */
   --color-surface: #ffffff;
-  --color-surface-hover: #fffaf5;
+  --color-surface-hover: #f5f9ff;
 
   /* Text colors */
   --color-text: #44403c;
@@ -47,13 +47,13 @@
   --color-border-code: #d0d7de;
 
   /* Shadow colors */
-  --shadow-primary: rgba(249, 115, 22, 0.35);
-  --shadow-primary-hover: rgba(249, 115, 22, 0.45);
+  --shadow-primary: rgba(59, 130, 246, 0.35);
+  --shadow-primary-hover: rgba(59, 130, 246, 0.45);
   --shadow-subtle: rgba(15, 23, 42, 0.1);
 
   /* Overlay colors */
-  --overlay-primary-light: rgba(249, 115, 22, 0.06);
-  --overlay-primary: rgba(249, 115, 22, 0.1);
+  --overlay-primary-light: rgba(59, 130, 246, 0.06);
+  --overlay-primary: rgba(59, 130, 246, 0.1);
   --overlay-white: rgba(255, 255, 255, 0.1);
 }
 
