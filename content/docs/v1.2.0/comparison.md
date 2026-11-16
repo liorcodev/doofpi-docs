@@ -58,18 +58,3 @@ If you've used tRPC before, many concepts will feel familiar.
   minimal configuration
 - You want **maximum runtime portability** - write once, deploy **anywhere** without changing a
   single line of server code
-
-## Choose tRPC when
-
-- You are building a **React or Next.js** app and want **deep framework integration** with TanStack
-  Query v5 and React Server Components (tRPC v11 has first-class support for prefetching and RSC
-  hydration)
-- You need **real-time** features - WebSocket subscriptions or **Server-Sent Events** (tRPC v11)
-- You need **progressive/batched streaming** of multiple queries over a single request via
-  `httpBatchStreamLink` (tRPC v11) - doofpi's `.download()`/`.upload()` return one raw response per
-  endpoint, they don't batch or progressively stream multiple procedure results
-- You need to send **FormData, Blob, or binary payloads** (tRPC v11 supports non-JSON content types)
-- You want to use **Valibot or ArkType** for validation instead of Zod
-- You need **request batching** or a custom **link/transformer pipeline** (e.g. superjson for
-  Date/BigInt serialization)
-- You're building a traditional server-rendered app and don't need edge deployment flexibility

@@ -2,60 +2,48 @@
 const route = useRoute();
 const { currentVersion } = useDocsVersion();
 
-const pageSlugs = [
-  { title: 'Introduction', slug: 'introduction' },
-  { title: 'Quick Start', slug: 'quick-start' },
-  { title: 'Routing', slug: 'core-concepts/routing' },
-  { title: 'Read, Write, Download & Upload', slug: 'core-concepts/read-and-write' },
-  { title: 'Zod Validation', slug: 'core-concepts/zod-validation' },
-  { title: 'Client', slug: 'core-concepts/client' },
-  { title: 'Context & Middleware', slug: 'guides/context-and-middleware' },
-  { title: 'Authentication & Authorization', slug: 'guides/authentication' },
-  { title: 'Error Handling', slug: 'guides/error-handling' },
-  { title: 'Runtime Environments', slug: 'guides/runtime-environments' },
-  { title: 'Doofpi Class', slug: 'api-reference/doofpi-class' },
-  { title: 'createClient', slug: 'api-reference/create-client' },
-  { title: 'EndpointBuilder', slug: 'api-reference/endpoint-builder' },
-  { title: 'Errors', slug: 'api-reference/errors' },
-  { title: 'Comparison', slug: 'comparison' }
-];
-
-const allPages = computed(() =>
-  pageSlugs.map(p => ({ title: p.title, to: `/docs/${currentVersion.value}/${p.slug}` }))
+const pages = computed(() =>
+  getDocsNav(currentVersion.value)
+    .flatMap(g => g.items)
+    .map(p => ({
+      title: p.title,
+      to: `/docs/${currentVersion.value}/${p.slug}`
+    }))
 );
 
-const currentIndex = computed(() => allPages.value.findIndex(p => p.to === route.path));
-const prev = computed(() =>
-  currentIndex.value > 0 ? allPages.value[currentIndex.value - 1] : null
-);
+const currentIndex = computed(() => pages.value.findIndex(p => p.to === route.path));
+const prev = computed(() => (currentIndex.value > 0 ? pages.value[currentIndex.value - 1] : null));
 const next = computed(() =>
-  currentIndex.value < allPages.value.length - 1 ? allPages.value[currentIndex.value + 1] : null
+  currentIndex.value >= 0 && currentIndex.value < pages.value.length - 1
+    ? pages.value[currentIndex.value + 1]
+    : null
 );
 </script>
 
 <template>
-  <div v-if="prev || next" class="flex gap-4 pt-8 border-t border-blue-100">
+  <div v-if="prev || next" class="flex gap-4 pt-8 border-t border-line">
     <NuxtLink
       v-if="prev"
       :to="prev.to"
-      class="flex-1 flex flex-col gap-1 px-5 py-4 rounded-xl border border-slate-200 hover:border-blue-300 bg-white hover:bg-blue-50 transition-all duration-200 group"
+      class="card card-hover flex-1 flex flex-col gap-1 px-5 py-4 group"
     >
-      <span class="text-xs text-slate-500 flex items-center gap-1.5">
+      <span class="text-xs text-muted flex items-center gap-1.5">
         <Icon name="heroicons:arrow-left" class="text-sm" /> Previous
       </span>
-      <span class="text-sm font-medium text-slate-300 group-hover:text-blue-300 transition-colors">
+      <span class="text-sm font-semibold text-ink group-hover:text-accent transition-colors">
         {{ prev.title }}
       </span>
     </NuxtLink>
+    <div v-else class="flex-1" />
     <NuxtLink
       v-if="next"
       :to="next.to"
-      class="flex-1 flex flex-col gap-1 px-5 py-4 rounded-xl border border-slate-200 hover:border-blue-300 bg-white hover:bg-blue-50 transition-all duration-200 group text-right ml-auto"
+      class="card card-hover flex-1 flex flex-col gap-1 px-5 py-4 items-end text-right group"
     >
-      <span class="text-xs text-slate-500 flex items-center gap-1.5 justify-end">
+      <span class="text-xs text-muted flex items-center gap-1.5">
         Next <Icon name="heroicons:arrow-right" class="text-sm" />
       </span>
-      <span class="text-sm font-medium text-slate-700 group-hover:text-blue-700 transition-colors">
+      <span class="text-sm font-semibold text-ink group-hover:text-accent transition-colors">
         {{ next.title }}
       </span>
     </NuxtLink>

@@ -4,53 +4,8 @@ const { currentVersion, versions } = useDocsVersion();
 const { isOpen: mobileOpen, close: closeMobileMenu } = useMobileMenu();
 const versionOpen = ref(false);
 
-const navSections = computed(() => [
-  {
-    group: 'Getting Started',
-    items: [
-      { title: 'Introduction', slug: 'introduction' },
-      { title: 'Quick Start', slug: 'quick-start' }
-    ]
-  },
-  {
-    group: 'Core Concepts',
-    items: [
-      { title: 'Routing', slug: 'core-concepts/routing' },
-      {
-        title:
-          currentVersion.value === 'v1.0.0' ? 'Read & Write' : 'Read, Write, Download & Upload',
-        slug: 'core-concepts/read-and-write'
-      },
-      { title: 'Zod Validation', slug: 'core-concepts/zod-validation' },
-      { title: 'Client', slug: 'core-concepts/client' }
-    ]
-  },
-  {
-    group: 'Guides',
-    items: [
-      { title: 'Context & Middleware', slug: 'guides/context-and-middleware' },
-      { title: 'Authentication & Authorization', slug: 'guides/authentication' },
-      { title: 'Error Handling', slug: 'guides/error-handling' },
-      { title: 'Runtime Environments', slug: 'guides/runtime-environments' }
-    ]
-  },
-  {
-    group: 'API Reference',
-    items: [
-      { title: 'Doofpi Class', slug: 'api-reference/doofpi-class' },
-      { title: 'createClient', slug: 'api-reference/create-client' },
-      { title: 'EndpointBuilder', slug: 'api-reference/endpoint-builder' },
-      { title: 'Errors', slug: 'api-reference/errors' }
-    ]
-  },
-  {
-    group: 'More',
-    items: [{ title: 'Comparison', slug: 'comparison' }]
-  }
-]);
-
 const navigation = computed(() =>
-  navSections.value.map(section => ({
+  getDocsNav(currentVersion.value).map(section => ({
     ...section,
     items: section.items.map(item => ({
       ...item,
@@ -71,38 +26,36 @@ function switchVersion(v: string) {
 </script>
 
 <template>
-  <!-- Backdrop for mobile -->
   <div
     v-if="mobileOpen"
-    class="lg:hidden fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-30 top-16"
+    class="lg:hidden fixed inset-0 bg-ink/30 backdrop-blur-sm z-30 top-16"
     @click="closeMobileMenu"
   />
 
   <aside
-    class="fixed top-16 left-0 bottom-0 w-64 flex flex-col overflow-y-auto border-r border-blue-100 bg-white px-4 py-6 z-40 transition-transform duration-300 ease-in-out"
+    class="fixed top-16 left-0 bottom-0 w-64 flex flex-col overflow-y-auto border-r border-line bg-canvas px-4 py-6 z-40 transition-transform duration-300 ease-in-out"
     :class="mobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'"
   >
-    <!-- Version selector -->
     <div class="relative mb-5">
       <div v-if="versionOpen" class="fixed inset-0 z-40" @click="versionOpen = false" />
       <button
-        class="relative z-50 w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm border border-slate-200 hover:border-blue-300 bg-white hover:bg-blue-50 transition-all duration-150 text-slate-700 font-medium"
+        class="relative z-50 w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm border border-line-strong hover:border-brand-400 bg-surface hover:bg-accent-soft transition-all duration-150 text-ink font-medium"
         @click="versionOpen = !versionOpen"
       >
         <div class="flex items-center gap-2">
-          <Icon name="heroicons:tag" class="text-blue-500 text-sm shrink-0" />
+          <Icon name="heroicons:tag" class="text-accent text-sm shrink-0" />
           <span>{{ currentVersion }}</span>
         </div>
         <div class="flex items-center gap-1.5">
           <span
             v-if="currentVersion === versions[0]"
-            class="text-[10px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded font-semibold"
+            class="text-[10px] bg-accent-soft text-accent px-1.5 py-0.5 rounded font-semibold"
           >
             latest
           </span>
           <Icon
             name="heroicons:chevron-down"
-            class="text-slate-400 text-sm transition-transform duration-150"
+            class="text-muted text-sm transition-transform duration-150"
             :class="versionOpen ? 'rotate-180' : ''"
           />
         </div>
@@ -117,29 +70,27 @@ function switchVersion(v: string) {
       >
         <div
           v-if="versionOpen"
-          class="absolute top-full mt-1 left-0 right-0 bg-white border border-slate-200 rounded-lg shadow-lg z-50 overflow-hidden"
+          class="absolute top-full mt-1 left-0 right-0 bg-surface border border-line-strong rounded-lg shadow-lg z-50 overflow-hidden"
         >
           <button
             v-for="v in versions"
             :key="v"
-            class="w-full flex items-center justify-between px-3 py-2.5 text-sm hover:bg-blue-50 transition-colors"
-            :class="
-              v === currentVersion ? 'text-blue-700 font-semibold bg-blue-50/60' : 'text-slate-600'
-            "
+            class="w-full flex items-center justify-between px-3 py-2.5 text-sm hover:bg-accent-soft transition-colors"
+            :class="v === currentVersion ? 'text-accent font-semibold' : 'text-body'"
             @click="switchVersion(v)"
           >
             <div class="flex items-center gap-2">
               <Icon
                 v-if="v === currentVersion"
                 name="heroicons:check"
-                class="text-blue-600 text-sm"
+                class="text-accent text-sm"
               />
               <span v-else class="w-4 inline-block" />
               {{ v }}
             </div>
             <span
               v-if="v === versions[0]"
-              class="text-[10px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded font-semibold"
+              class="text-[10px] bg-accent-soft text-accent px-1.5 py-0.5 rounded font-semibold"
             >
               latest
             </span>
@@ -148,10 +99,9 @@ function switchVersion(v: string) {
       </Transition>
     </div>
 
-    <!-- Nav sections -->
     <nav class="flex flex-col gap-6">
       <div v-for="section in navigation" :key="section.group">
-        <p class="px-3 mb-1.5 text-[10.5px] font-semibold uppercase tracking-widest text-slate-600">
+        <p class="px-3 mb-1.5 text-[10.5px] font-semibold uppercase tracking-widest text-muted">
           {{ section.group }}
         </p>
         <ul class="flex flex-col gap-0.5">
@@ -161,16 +111,15 @@ function switchVersion(v: string) {
               class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150"
               :class="
                 route.path === item.to
-                  ? 'bg-blue-50 text-blue-700 border border-blue-200 shadow-sm shadow-blue-100'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                  ? 'bg-accent-soft text-accent border border-brand-200'
+                  : 'text-body hover:text-ink hover:bg-subtle border border-transparent'
               "
               @click="closeMobileMenu"
             >
               <span
-                v-if="route.path === item.to"
-                class="w-1 h-1 rounded-full bg-blue-600 shrink-0"
+                class="w-1 h-1 rounded-full shrink-0"
+                :class="route.path === item.to ? 'bg-brand-600' : 'bg-transparent'"
               />
-              <span v-else class="w-1 h-1 rounded-full bg-transparent shrink-0" />
               {{ item.title }}
             </NuxtLink>
           </li>
