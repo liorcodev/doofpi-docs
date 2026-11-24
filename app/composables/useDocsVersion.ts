@@ -1,12 +1,12 @@
 // List versions newest-first; the first entry is treated as "latest".
-export const DOCS_VERSIONS = ['v1.2.0', 'v1.1.0', 'v1.0.0'] as const;
+export const DOCS_VERSIONS = ['v1.3.1', 'v1.3.0', 'v1.2.0', 'v1.1.0', 'v1.0.0'] as const;
 export type DocsVersion = (typeof DOCS_VERSIONS)[number];
 export const LATEST_VERSION: DocsVersion = DOCS_VERSIONS[0]!;
 
 /**
  * Returns the versions that should be checked as fallbacks for `version`,
  * ordered from the requested version down to the oldest.
- * e.g. if versions = ['v1.2.0','v1.1.0','v1.0.0'] and version = 'v1.1.0'
+ * e.g. if versions = ['v1.3.1','v1.3.0','v1.2.0','v1.1.0','v1.0.0'] and version = 'v1.1.0'
  * → ['v1.1.0', 'v1.0.0']
  */
 export function getFallbackChain(version: string): string[] {
