@@ -6,7 +6,7 @@
     "format": "prettier --write .",
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && node scripts/trim-html.mjs",
     "preview": "node scripts/preview-pages.mjs"
   },
   "dependencies": {
